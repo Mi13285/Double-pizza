@@ -5,11 +5,14 @@ import Content from "./Content";
 import { pizza } from "./pizza";
 function App() {
   const [data, useDate] = useState(pizza);
+  const [cart, setCart] = useState([]);
   return (
-    <div className={s.container}>
-      <Header />
-      <Content data={data} />
-    </div>
+    <>
+      <Header cart={cart} />
+      <div className={s.container}>
+        <Content data={data} cart={cart} setCart={setCart} />
+      </div>
+    </>
   );
 }
 

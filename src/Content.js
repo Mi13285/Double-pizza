@@ -2,17 +2,30 @@ import React from "react";
 import { useState } from "react";
 import Gallery from "./Gallery";
 import s from "./Content.module.css";
-export default function Content({ data }) {
+export default function Content({ data, cart, setCart }) {
   const images = data.map((item) => item.photo);
   console.log("data", data);
   const [currentLeftImage, setCurrentLeftImage] = useState(0);
   const [currentRightImage, setCurrentRightImage] = useState(0);
+  const order = cart;
+
   const controlLeftStyle = {
     Left: "125px",
   };
   const controlRightStyle = {
     right: "125px",
   };
+
+  function addToCart() {
+    order.push({
+      title1: data[currentLeftImage].title,
+      title2: data[currentRightImage].title,
+      summary: +data[currentLeftImage].price + +data[currentRightImage].price,
+    });
+    setCart(order);
+    alert("PIZZA ADD TO CART");
+    console.log("cart111", cart);
+  }
 
   return (
     <div className={s.root}>
@@ -31,7 +44,7 @@ export default function Content({ data }) {
               currentImage={currentLeftImage}
               setCurrentImage={setCurrentLeftImage}
             />
-            <p>{data[currentLeftImage].price}Р</p>
+            <p className={s.price}>Price:R{data[currentLeftImage].price} </p>
             <p>{data[currentLeftImage].diameter}</p>
           </div>
         </div>
@@ -52,14 +65,19 @@ export default function Content({ data }) {
           </div>
 
           <p>{data[currentLeftImage].diameter}</p>
-          <p>{data[currentLeftImage].price}P</p>
+          <p className={s.price}>Price:R{data[currentLeftImage].price}</p>
         </div>
       </div>
-      <p className={s.summary}>
-        Summary Price:{" "}
-        {data[currentLeftImage].price + data[currentRightImage].price}
-      </p>
-      <button> Add to cart</button>
+      <div className={s.footer}>
+        <p className={s.summary}>
+          Summary Price:{" "}
+          {data[currentLeftImage].price + data[currentRightImage].price}
+        </p>
+        <button className={s.button} onClick={addToCart}>
+          {" "}
+          Add to cart
+        </button>
+      </div>
     </div>
   );
 }

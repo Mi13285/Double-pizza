@@ -50,10 +50,27 @@ title {
     font-weight: 600;
     padding: 0 16px;
     margin: 0;
+    padding: 0;
 }
 .summary {
     font-size: 16px;
     padding: 0 16px;
     font-weight: 600;
     color: red;
+}
+.button {
+    width: 200px;
+    height: 40px;
+    background-color: chocolate;
+    color: black;
+    border-radius: 8px;
+    border : 0;
+    cursor: pointer;
+}
+.footer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+
 }
