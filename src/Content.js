@@ -44,7 +44,7 @@ export default function Content({ data, cart, setCart }) {
               currentImage={currentLeftImage}
               setCurrentImage={setCurrentLeftImage}
             />
-            <p className={s.price}>Price:R{data[currentLeftImage].price} </p>
+            <p className={s.price}>ЦЕНА:{data[currentLeftImage].price} </p>
             <p>{data[currentLeftImage].diameter}</p>
           </div>
         </div>
@@ -65,17 +65,16 @@ export default function Content({ data, cart, setCart }) {
           </div>
 
           <p>{data[currentLeftImage].diameter}</p>
-          <p className={s.price}>Price:R{data[currentLeftImage].price}</p>
+          <p className={s.price}>ЦЕНА:{data[currentLeftImage].price}</p>
         </div>
       </div>
       <div className={s.footer}>
         <p className={s.summary}>
-          Summary Price:{" "}
-          {data[currentLeftImage].price + data[currentRightImage].price}
+          ИТОГО:{" "}
+          {+data[currentLeftImage].price + +data[currentRightImage].price}
         </p>
         <button className={s.button} onClick={addToCart}>
-          {" "}
-          Add to cart
+          ДОБАВИТЬ
         </button>
       </div>
     </div>
