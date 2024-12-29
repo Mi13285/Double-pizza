@@ -9,7 +9,7 @@ You may also see any lint errors in the console.
 
 
 
-### `pizzeria shop
+### `pizzeria shop`
 *** https://double-pizza.vercel.app
 1) интернет магазин для пиццерии  
 2) пользователь может выбирать пиццу , заказывать 
