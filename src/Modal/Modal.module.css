@@ -1,0 +1,80 @@
+.overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: unset;
+    z-index: 10;
+}
+.modal {
+    width: 100%;
+    min-width: 300px;
+    max-width: 700px;
+    min-height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    display: flex;
+    overflow: hidden;
+    margin: 0 16px;
+    padding: 15px;
+}
+.img {
+    width: 40%;
+    object-fit: cover;
+}
+
+.modalContent {
+    padding: 16px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modalHeader {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    font-size: 18px;
+    font-weight: 600;
+    margin: unset;
+}
+
+.modalBody {
+    margin-top: 16px;
+    text-align: left;
+}
+
+.modalFooter {
+    margin-top: 16px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.okButton, .cancelButton {
+    outline: none;
+    border: none;
+    padding: 8px 16px;
+    box-shadow: 0 0 8px gray;
+    color: white;
+    cursor: pointer;
+}
+
+.modalFooter button:hover {
+    opacity: 0.7;
+}
+
+.okButton {
+    background-color: rgba(46, 204, 14, 0.884);
+}
+
+.cancelButton {
+    background-color: rgb(219, 11, 11);
+}

@@ -1,0 +1,58 @@
+.root {
+    position: relative;
+}
+
+.image {
+    object-fit: cover;
+}
+
+.prevArrow, .nextArrow, .prevArrowVertical, .nextArrowVertical {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background: rgba(167, 14, 14, 0.7);
+    position: absolute;
+    z-index:  10;
+}
+
+.prevArrow {
+    left: 16px;
+}
+
+.nextArrow {
+    right: 16px;
+}
+
+.prevArrowVertical {
+    top: 16px;
+}
+
+.nextArrowVertical {
+    bottom: 16px;
+}
+
+.image {
+    user-select: none;
+    object-fit: cover;
+}
+
+
+.galleryLeftBlock {
+    width: 275px;
+    overflow: hidden;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;    
+}
+.galleryRightBlock {
+    width: 275px;
+    overflow: hidden;
+    display: flex; 
+    justify-content: flex-end;
+}
