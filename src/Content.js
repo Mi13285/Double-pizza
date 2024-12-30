@@ -23,7 +23,7 @@ export default function Content({ data, cart, setCart }) {
       summary: +data[currentLeftImage].price + +data[currentRightImage].price,
     });
     setCart(order);
-    alert("PIZZA ADD TO CART");
+    alert("PIZZA Добавлена в Корзину");
     console.log("cart111", cart);
   }
 
