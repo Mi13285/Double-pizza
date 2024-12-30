@@ -1,5 +1,5 @@
 
-### `pizzeria shop`
+### `pizzaria Shop "Double Pizza `
 *** https://double-pizza.vercel.app
 1) интернет магазин для пиццерии  
 2) пользователь может выбирать пиццу , заказывать 
