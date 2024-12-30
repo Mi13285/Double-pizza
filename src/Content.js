@@ -23,7 +23,7 @@ export default function Content({ data, cart, setCart }) {
       summary: +data[currentLeftImage].price + +data[currentRightImage].price,
     });
     setCart(order);
-    alert("PIZZA Добавлена в Корзину");
+    alert("Пицца ДОБАВЛЕННО В ЗАКАЗ");
     console.log("cart111", cart);
   }
 
@@ -64,8 +64,8 @@ export default function Content({ data, cart, setCart }) {
             />
           </div>
 
-          <p>{data[currentLeftImage].diameter}</p>
-          <p className={s.price}>ЦЕНА:{data[currentLeftImage].price}</p>
+          <p>{data[currentRightImage].diameter}</p>
+          <p className={s.price}>ЦЕНА:{data[currentRightImage].price}</p>
         </div>
       </div>
       <div className={s.footer}>
