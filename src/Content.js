@@ -4,9 +4,11 @@ import Gallery from "./Gallery";
 import s from "./Content.module.css";
 export default function Content({ data, cart, setCart }) {
   const images = data.map((item) => item.photo);
+  console.log("images222", images);
   console.log("data", data);
   const [currentLeftImage, setCurrentLeftImage] = useState(0);
   const [currentRightImage, setCurrentRightImage] = useState(0);
+
   const order = cart;
 
   const controlLeftStyle = {
@@ -23,8 +25,7 @@ export default function Content({ data, cart, setCart }) {
       summary: +data[currentLeftImage].price + +data[currentRightImage].price,
     });
     setCart(order);
-    alert("Пицца ДОБАВЛЕННО В ЗАКАЗ");
-    console.log("cart111", cart);
+    alert("ДОБАВЛЕННО В ЗАКАЗ");
   }
 
   return (
