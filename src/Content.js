@@ -19,6 +19,7 @@ export default function Content({ data, cart, setCart }) {
   };
 
   function addToCart() {
+    console.log(data[currentLeftImage].title);
     order.push({
       title1: data[currentLeftImage].title,
       title2: data[currentRightImage].title,

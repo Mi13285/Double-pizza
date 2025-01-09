@@ -10,7 +10,7 @@ export default function Header({ cart }) {
       <div className={s.orderItem}>
         <div>
           <div>{item.title1} </div>
-          <div>{item.title1} </div>
+          <div>{item.title2} </div>
         </div>
         <div className={s.orderPrice}></div>
         <div> {item.summary}P</div>
